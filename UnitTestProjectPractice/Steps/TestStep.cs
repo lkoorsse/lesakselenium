@@ -41,7 +41,12 @@ namespace TestProjectPractice
             webDriver.Navigate().GoToUrl("Https://www.google.co.uk");
         }
 
-        
+        [Given(@"I select get quote")]
+        public void GivenISelectGetQuote()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
 
     }
 }
