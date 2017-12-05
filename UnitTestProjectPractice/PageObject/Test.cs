@@ -22,59 +22,16 @@ namespace UnitTestProjectPractice
         {
 
             driver.Navigate().GoToUrl("http://www.google.com");
-
-            //Assert.AreEqual("SW Test Academy - Software Test Academy", driver.Title);
-            // driver.Close();
-            //driver.Quit();
+            IWebElement query = driver.FindElement(By.Name("q"));
+            query.SendKeys("Hello Selenium WebDriver!");
+            query.Submit();
+            Console.WriteLine(driver.Title);
 
         }
+
+
     }
 }
-//{
-        //private IWebDriver webDriver;
-
-        //[BeforeScenario]
-        //public void InitScenario()
-        //{ webDriver = new ChromeDriver(); }
-
-        //[AfterScenario()]
-        //public void TearDownScenario()
-        //{ webDriver.Dispose();}
-      
-            
-         //    { IWebDriver driver = new ChromeDriver(); }
-
-
-
-    //}
-
-//}
-
-
-//    [TestClass]
-//    public class Test
-//    {
-//        private static IWebDriver driverGC;
-//    }
-
-//    [AssemblyInitialize]
-//    public static void SetUp(TestContext context)
-//    {
-//    driverGC = new ChromeDriver(@"c:\dev\UnitTestProjectPractice\chromedriver");
-//    }
-
-
-//    [TestMethod]
-//    public void TestChromeDriver()
-//    {
-
-//    driverGC.Navigate().GoToUrl("");
-//    driverGC.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
-//        driverGC.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
-
-//    }
-//}
-
 
 
 
