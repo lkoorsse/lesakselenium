@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using OpenQA.Selenium;
@@ -12,7 +11,7 @@ using UnitTestProjectPractice.PageObject;
 namespace TestProjectPractice
 {
     [Binding]
-    public class NavigationSteps
+    public class TestStepOnly
     {
 
        
@@ -22,6 +21,7 @@ namespace TestProjectPractice
         public void InitScenario()
         {
             webDriver = new ChromeDriver();
+           
         }
 
         [AfterScenario]
@@ -42,15 +42,16 @@ namespace TestProjectPractice
         [Given(@"I select get quote")]
         public void GivenISelectGetQuote()
         {
-              webDriver.FindElement(By.ClassName("button get-quote car")).Click();
+              webDriver.FindElement(By.CssSelector("a.home")).Click();
 
         }
 
         [Given(@"I insert '(.*)'")]
         public void GivenIInsert(string carReg)
         {
+            ScenarioContext.Current.Pending();
 
-          //  .GetCarReg.Sendkeys(carReg);
+            //  .GetCarReg.Sendkeys(carReg);
 
             //var getCarRegField  new WaitPageObject(By.Id("AboutCarPanel_RegNumber"), 10));
             //     //     WaitPageObject.WaitForElementLoad(By.Id("AboutCarPanel_RegNumber"), 10);
