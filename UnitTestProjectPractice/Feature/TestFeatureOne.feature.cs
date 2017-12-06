@@ -17,38 +17,37 @@ namespace UnitTestProjectPractice.Feature
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("TestFeature")]
-    public partial class TestFeatureFeature
+    [TechTalk.SpecRun.FeatureAttribute("TestFeatureOne", Description="\tIn order to get a successfull quote from GoCompare\r\n\tAs a user  I am on the goco" +
+        "mpare website\r\n\tI want to submit my car details ", SourceFile="Feature\\TestFeatureOne.feature", SourceLine=0)]
+    public partial class TestFeatureOneFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "TestFeature.feature"
+#line 1 "TestFeatureOne.feature"
 #line hidden
         
-        [NUnit.Framework.OneTimeSetUpAttribute()]
+        [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestFeature", "\tIn order to get a successfull quote from GoCompare\r\n\tAs a user  I am on the goog" +
-                    "le website\r\n\tI want to input my car details", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestFeatureOne", "\tIn order to get a successfull quote from GoCompare\r\n\tAs a user  I am on the goco" +
+                    "mpare website\r\n\tI want to submit my car details ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.OneTimeTearDownAttribute()]
+        [TechTalk.SpecRun.FeatureCleanup()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [NUnit.Framework.TearDownAttribute()]
+        [TechTalk.SpecRun.ScenarioCleanup()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -64,11 +63,10 @@ namespace UnitTestProjectPractice.Feature
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Navigation")]
-        public virtual void Navigation()
+        [TechTalk.SpecRun.ScenarioAttribute("01TestFeatureOne", SourceLine=6)]
+        public virtual void _01TestFeatureOne()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigation", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01TestFeatureOne", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -83,6 +81,12 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Then("the car reg is popolated into the reg field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.TestRunCleanup()]
+        public virtual void TestRunCleanup()
+        {
+            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         }
     }
 }

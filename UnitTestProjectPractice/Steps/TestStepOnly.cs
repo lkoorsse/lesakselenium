@@ -29,12 +29,12 @@ namespace TestProjectPractice
         {
             webDriver.Dispose();
         }
-    
+
 
         [Given(@"I browse to  '(.*)'")]
         public void GivenIBrowseTo(string url)
         {
-           
+
 
             webDriver.Navigate().GoToUrl("Https://www.gocompare.com");
         }
@@ -42,25 +42,12 @@ namespace TestProjectPractice
         [Given(@"I select get quote")]
         public void GivenISelectGetQuote()
         {
-              webDriver.FindElement(By.CssSelector("a.home")).Click();
+            webDriver.FindElement(By.CssSelector("a.home")).Click();
 
         }
 
         [Given(@"I insert '(.*)'")]
-        public void GivenIInsert(string carReg)
-        {
-            ScenarioContext.Current.Pending();
-
-            //  .GetCarReg.Sendkeys(carReg);
-
-            //var getCarRegField  new WaitPageObject(By.Id("AboutCarPanel_RegNumber"), 10));
-            //     //     WaitPageObject.WaitForElementLoad(By.Id("AboutCarPanel_RegNumber"), 10);
-            //      getCarRegField.SendKeys(carReg);
-        }
-
-
-        [Then(@"the car reg is popolated into the reg field")]
-        public void ThenTheCarRegIsPopolatedIntoTheRegField()
+        public void GivenIInsert(string p0)
         {
             ScenarioContext.Current.Pending();
         }
@@ -71,7 +58,13 @@ namespace TestProjectPractice
             ScenarioContext.Current.Pending();
         }
 
-       
+        [Then(@"the car reg is popolated into the reg field")]
+        public void ThenTheCarRegIsPopolatedIntoTheRegField()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+
 
     }
 }

@@ -42,9 +42,7 @@ namespace UnitTestProjectPractice
                     By.CssSelector("#about-car-panel > div.question.first.carLookup-question > div:nth-child(4) > a"));
             findCarElement.Click();
 
-
-
-
+            
             driver.Dispose();
         }
 
