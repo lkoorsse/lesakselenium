@@ -4,7 +4,7 @@ In order to get a successfull quote from GoCompare
 	I want to submit my car details 
 
 
-Scenario: 02TestFeatureTwo
+Scenario: 02TestFeatureTwo1
 	Given I am at 'https//www.google.co.uk' website
 	And I browse to website 'gocompare' 
 	And I select get quote button
